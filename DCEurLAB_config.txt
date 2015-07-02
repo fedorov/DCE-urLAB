@@ -1,0 +1,67 @@
+
+## Config file
+## Comments with "##"
+## Adjusted for Bruker data 
+
+size_window  = 350
+interpolation = NO
+
+type_roi = FREE         ## Options: BOX, FREE, FULL
+size_roi = [32,32]      
+resolution_roi = 1      ## Valid options: 1,2,3,4,8
+
+Path_data   = E:\DCE-urLAB\Examples\Article_Case2\Data\
+path_result = E:\DCE-urLAB\Examples\
+path_t1map  = E:\DCE-urLAB\Examples\Article_Case2\
+path_aif    = E:\DCE-urLAB\Examples\
+
+
+frame_injection = 3   ## from [1,n)
+frame_period    = 30  ## in seconds, time of frame acquisition
+
+t10_tissue      = 1.0   ## Precontrast tissue T1 (relaxation time) in seconds
+t10_blood       = 1.0   ## Precontrast blood T1 (relaxation time) in seconds
+repetition_time = 0.005 ## TR (Repetition time) in seconds 
+
+injected_dose   = 0.2   ## mmol/Kg animal 
+relaxivity      = 3.6   ## r1 (Contrast Agent T1 relaxivity), (mM s-1) 
+haematocrit     = 0.45  ## HTC (haematocrit) between 0 and 1
+
+flip_angle      = 90    ## flip angle (degrees) of spoiled gradient echo sequences (90 degrees in spin-echo sequences)
+
+size_im    = [128,128] ## size of single slice (x,y dimensions)
+nslices       =  4     ## number of slices (z dimension)
+nframes       = 50     ## number of dynamic frames (time dimensions)
+nframes_iauc   = 3     ## frames for IAUC measurement
+
+## Parameters for biexponential AIF (Tofts model)
+
+aif_m1 = 2.810     ## min-1
+aif_m2 = 0.023     ## mim-1
+aif_a1 =   14.2534 ## kg/litre ;a2*1.5833 
+aif_a2 =   9.00237 ## kg/litre ;(1/0.043)/(1.5833+1) 
+
+## Tofts initial parameters
+ktrans_ini = 0.03    ## min-1
+kep_ini    = 0.20    ## min-1
+vp_ini     =  0.0    ## plasma volume fraction [0,1) in Tofts modified model
+
+## Hoffmann/Brix initial parameters
+Ah_ini    =  1.5     ## No units
+keph_ini  =  0.05    ## kep (min-1)
+kelh_ini  =  0.001   ## kel (min-1)
+tau_ini   =  0.0     ## Injection time (if 0, hoffmann model, otherwise, Brix model)
+tau_infusion = 0.0   ## infusion time (if perfect bolus injection: tau infusion=0) Applied in Hoffmann model
+
+## Larsson parameters
+kepl_ini = 0.05      ## kep (min-1)
+sl_ini   = 1.0       ## no units
+
+
+ktrans_rr = 0.20     ## values for the "Reference region" model
+ve_rr     = 0.20
+
+
+
+
+

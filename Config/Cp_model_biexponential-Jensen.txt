@@ -1,0 +1,13 @@
+
+# Plasma concentration models:
+
+model  = biexponential
+
+## Parameters for biexponential model for plasma concentration (Tofts model)
+m1 = 0.8     ## min-1
+m2 = 0.021   ## mim-1
+a1 = 9.5     ## kg/litre 
+a2 = 6.0     ## kg/litre 
+
+
+
